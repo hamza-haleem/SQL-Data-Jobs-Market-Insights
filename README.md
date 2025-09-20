@@ -155,7 +155,7 @@ where row_num in(1, 2, 3);
 - Cloud and Big Data tools like AWS, Azure, and Spark are crucial for engineering roles.
 - ML/AI roles (Data Scientist, ML Engineer) emphasize Python, R, TensorFlow, and PyTorch, reflecting the growing focus on machine learning frameworks.
 
-[Top Three Demanded Skills](Assets/top_three_demanded_skills.png)
+![Top Three Demanded Skills](Assets/top_three_demanded_skills.png)
 
 *This chart highlights the top three most in-demand skills across different job roles, showing how technical expertise varies by position*
 ### 5. What is the 10 most in-demand skill for Data Analyst job postings?
@@ -178,7 +178,7 @@ limit 10;
 - Programming and statistical tools like R and SAS also show strong demand.
 - Even basic productivity tools (Word, PowerPoint) are required in thousands of postings, emphasizing communication and reporting.
 
-[Data Analyst Top Skills](Assets/top_data_analyst_skills.jpg)
+![Data Analyst Top Skills](Assets/top_data_analyst_skills.jpg)
 
 *This chart highlights the core technical and analytical skills most frequently required for Data Analyst roles*
 ### 6. Among the top countries by job postings, what is the average yearly salary in each?
