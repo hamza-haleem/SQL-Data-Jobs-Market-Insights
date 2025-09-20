@@ -8,7 +8,6 @@ The job market is highly competitive, and understanding demand, salaries, and sk
 This dataset provides structured information such as:
 - Job titles and locations
 - Salaries (annual/hourly)
-- Work from home and health insurance flags
 - Required skills for each job
 - Company information
 
@@ -44,8 +43,8 @@ group by job_title_short
 order by avg_salary desc;
 ```
 - Senior-level roles such as Senior Data Scientist and Senior Data Engineer earn the highest salaries, both above $150K.
-- Data Scientist and Data Engineer roles are highly demanded (3,600–5,000+ postings) with strong six-figure salaries (~$132K).
-- Data Analyst positions dominate in volume (6,227 jobs) but have the lowest average salary (~$92K).
+- Data Scientist and Data Engineer roles are highly demanded (3,600–5,000+ postings) with strong six-figure salaries ($132K).
+- Data Analyst positions dominate in volume (6,227 jobs) but have the lowest average salary ($92K).
 - Overall, advanced technical roles (ML, Data Science, Engineering) provide higher pay, while analyst roles offer more opportunities but lower compensation.
  
 
@@ -76,8 +75,8 @@ order by demand_count desc
 limit 10;
 ```
 - Python and SQL dominate the market with demand counts over 240K, making them the most essential skills.
-- Cloud skills like AWS and Azure show strong demand (~100K each), highlighting the rise of cloud technologies.
-- Visualization tools such as Tableau and Power BI are also highly requested (~65K–73K).
+- Cloud skills like AWS and Azure show strong demand (100K each), highlighting the rise of cloud technologies.
+- Visualization tools such as Tableau and Power BI are also highly requested (65K–73K).
 - Traditional tools like Excel and statistical languages like R remain consistently valuable.
  
 
@@ -111,7 +110,7 @@ group by job_title_short
 order by job_title_short;
 ```
 - Senior roles (Senior Data Engineer, Senior Data Scientist) earn noticeably higher salaries in remote positions compared to non-remote.
-- Software Engineers show one of the largest gaps: remote salaries (~$163K) are much higher than non-remote (~$129K).
+- Software Engineers show one of the largest gaps: remote salaries ($163K) are much higher than non-remote ($129K).
 - Data Analyst jobs are abundant in non-remote positions (5,751 vs. 476 remote), and salaries are slightly lower for remote.
 - Overall, remote roles tend to pay more, especially in technical and senior positions, but they are fewer in number.
   
@@ -205,8 +204,8 @@ order by avg_salary desc;
 ```
 - Guam, Australia, and Japan offer the highest average salaries, all above $149K.
 - United States leads by far in job availability with 16,205 roles, though average salary ($120K) is lower compared to smaller markets.
-- Sudan shows strong demand (1,124 jobs) with competitive pay at ~$134K.
-- India offers a large number of opportunities but with a significantly lower average salary (~$96K).
+- Sudan shows strong demand (1,124 jobs) with competitive pay at $134K.
+- India offers a large number of opportunities but with a significantly lower average salary ($96K).
 
 | Job Country         | Total Jobs | Avg. Salary (\$) |
 | ------------------- | ---------- | ---------------- |
@@ -238,8 +237,8 @@ group by job_title_short
 select * from ranked
 order by salary_rank;
 ```
-- Senior Data Scientist tops the salary chart with ~$156K, despite being only 4th in demand.
-- Data Analyst is the most in-demand role (6,227 jobs) but has the lowest average salary (~$92K).
+- Senior Data Scientist tops the salary chart with $156K, despite being only 4th in demand.
+- Data Analyst is the most in-demand role (6,227 jobs) but has the lowest average salary ($92K).
 - Machine Learning Engineers rank high in salary (#3) but relatively low in demand (#9).
 - Data Scientist and Data Engineer show a balanced mix of demand and competitive salaries.
 
@@ -270,9 +269,9 @@ group by company_name
 order by total_jobs desc
 limit 10;
 ```
-- Incredible Health Inc. leads with the highest job postings (1,313), offering an average salary of ~$95K.
-- Citizens Financial Group Inc. provides the highest average salary (~$135K) despite a smaller job count.
-- Walmart and Evergreen maintain strong compensation levels (~$100K) with steady hiring.
+- Incredible Health Inc. leads with the highest job postings (1,313), offering an average salary of $95K.
+- Citizens Financial Group Inc. provides the highest average salary ($135K) despite a smaller job count.
+- Walmart and Evergreen maintain strong compensation levels ($100K) with steady hiring.
 - Companies like Public Consulting Group and ManTech have lower salary averages but still contribute to job opportunities.
 
 | Company Name                            | Avg. Salary (\$) | Total Jobs |
