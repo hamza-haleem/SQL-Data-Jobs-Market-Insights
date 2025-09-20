@@ -96,6 +96,66 @@ limit 10;
 | Java      | 51,294       |
 
 *Most Requested Technical Skills*
+### 3. Compare the average salary of remote vs non-remote jobs for each job_title_short.
+```sql
+select 
+	job_title_short,
+	round(avg(case when job_work_from_home = true then salary_year_avg end), 0)
+	as avg_remote_salary,
+	round(avg(case when job_work_from_home = false then salary_year_avg end), 0)
+	as avg_nonremote_salary,
+	count(case when job_work_from_home = true then job_id end) as remote_job_count,
+	count(case when job_work_from_home = false then job_id end) as nonremote_job_count
+from job_postings_fact
+where salary_year_avg is not null
+group by job_title_short
+order by job_title_short;
+```
+- Senior roles (Senior Data Engineer, Senior Data Scientist) earn noticeably higher salaries in remote positions compared to non-remote.
+- Software Engineers show one of the largest gaps: remote salaries (~$163K) are much higher than non-remote (~$129K).
+- Data Analyst jobs are abundant in non-remote positions (5,751 vs. 476 remote), and salaries are slightly lower for remote.
+- Overall, remote roles tend to pay more, especially in technical and senior positions, but they are fewer in number.
+  
+
+| Job Title              | Avg Remote Salary | Avg Non-Remote Salary | Remote Jobs | Non-Remote Jobs |
+|------------------------|-------------------|-----------------------|-------------|-----------------|
+| Business Analyst       | 97,224            | 97,684                | 251         | 693             |
+| Cloud Engineer         | 139,033           | 116,397               | 23          | 38              |
+| Data Analyst           | 89,939            | 91,969                | 476         | 5,751           |
+| Data Engineer          | 134,529           | 131,832               | 931         | 2,712           |
+| Data Scientist         | 133,948           | 132,049               | 1,157       | 3,908           |
+| Machine Learning Engr  | 154,817           | 149,475               | 151         | 278             |
+| Senior Data Analyst    | 103,602           | 113,520               | 154         | 782             |
+| Senior Data Engineer   | 171,057           | 144,904               | 279         | 849             |
+| Senior Data Scientist  | 160,128           | 154,758               | 271         | 988             |
+| Software Engineer      | 163,463           | 128,807               | 213         | 430             |
+
+*Remote vs Non-Remote Job Salaries and Demand*
+### 4. What is the top 3 in-demand skill for each job title?
+```sql
+with top_three_skills as
+(
+	select
+	job_postings_fact.job_title_short,
+	skills_dim.skills,
+	count(job_postings_fact.job_id) as total_jobs,
+	row_number() over(partition by job_postings_fact.job_title_short
+	order by count(job_postings_fact.job_id) desc) as row_num
+from job_postings_fact
+	join skills_job_dim on job_postings_fact.job_id = skills_job_dim.job_id
+	join skills_dim on skills_job_dim.skill_id = skills_dim.skill_id
+group by job_postings_fact.job_title_short, skills_dim.skills
+order by job_postings_fact.job_title_short, total_jobs desc
+)
+select * from top_three_skills
+where row_num in(1, 2, 3);
+```
+- SQL and Python dominate across almost all data-related roles, highlighting their importance as core skills.
+- Excel and Tableau remain highly demanded for analyst roles, showing continued value in reporting and visualization.
+- Cloud and Big Data tools like AWS, Azure, and Spark are crucial for engineering roles.
+- ML/AI roles (Data Scientist, ML Engineer) emphasize Python, R, TensorFlow, and PyTorch, reflecting the growing focus on machine learning frameworks.
+
+
 
 ## What I Learned
 - How to structure SQL queries for both simple aggregations and complex joins
