@@ -30,7 +30,7 @@ Relationships:
 - Each job posting can require multiple skills (skills_job_dim).
 - Each skill (skills_dim) can be associated with multiple job postings.
 
-[Click here for ERD](ERD.png)
+[Click here for ERD](Assets.ERD.png)
 ## The Analysis
 The analysis focused on understanding job market trends. Using SQL, I examined the volume of job postings, average salaries by job title, most active hiring companies, and the prevalence of remote work opportunities. I also explored the demand for technical and analytical skills by aggregating skill frequencies across job postings. This provided a clear picture of which roles are in high demand, which skills are most valued, and how salaries vary by company, work type etc.
 ### 1. What is the job count & average yearly salary for each job_title_short?
@@ -155,7 +155,7 @@ where row_num in(1, 2, 3);
 - Cloud and Big Data tools like AWS, Azure, and Spark are crucial for engineering roles.
 - ML/AI roles (Data Scientist, ML Engineer) emphasize Python, R, TensorFlow, and PyTorch, reflecting the growing focus on machine learning frameworks.
 
-[Top Three Demanded Skills](top_three_demanded_skills.png)
+[Top Three Demanded Skills](Assets.top_three_demanded_skills.png)
 
 *This chart highlights the top three most in-demand skills across different job roles, showing how technical expertise varies by position*
 ### 5. What is the 10 most in-demand skill for Data Analyst job postings?
@@ -178,7 +178,7 @@ limit 10;
 - Programming and statistical tools like R and SAS also show strong demand.
 - Even basic productivity tools (Word, PowerPoint) are required in thousands of postings, emphasizing communication and reporting.
 
-[Data Analyst Top Skills](top_data_analyst_skills.jpg)
+[Data Analyst Top Skills](Assets.top_data_analyst_skills.jpg)
 
 *This chart highlights the core technical and analytical skills most frequently required for Data Analyst roles*
 ### 6. Among the top countries by job postings, what is the average yearly salary in each?
