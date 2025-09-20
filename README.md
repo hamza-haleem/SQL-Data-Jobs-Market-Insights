@@ -1,6 +1,6 @@
 # SQL-Data-Jobs-Market-Insights
 ## Introduction
-This project explores job postings data using SQL. The dataset contains job information, company details, and associated skills. The goal was to perform both general job market analysis and focused role-specific analysis (e.g., Data Analyst) to uncover insights about salaries, skills, and hiring trends.
+This project explores the data job market by analyzing job postings, salaries, skills, and hiring trends. Using SQL queries and structured datasets, the goal is to uncover insights into demand, compensation, and skill requirements across different roles.
 
 [View the SQL Queries](Data_Jobs_Analysis.sql)
 ## Background
@@ -15,8 +15,7 @@ This dataset provides structured information such as:
 By analyzing this data, we can identify high-paying roles, in-demand skills, and hiring patterns across different companies and job titles.
 ## Tools I Used
 - PostgreSQL → to query and analyze the dataset
-- DBMS ERD → to understand table relationships
-- SQL Window Functions → for ranking and advanced calculations
+- ChatGPT → Quick insights generation and result interpretation
 - GitHub → to document and share the project
 ## Entity Relationship Diagram (ERD)
 The project database consists of four main tables connected through keys:
@@ -291,9 +290,11 @@ limit 10;
 
 *Top Recruiting Companies by Pay and Demand*
 ## What I Learned
-- How to structure SQL queries for both simple aggregations and complex joins
-- Using window functions (ROW_NUMBER, RANK) to rank job titles by salary and demand
-- Importance of role-specific analysis (e.g., Data Analyst) for deeper insights
+- How to design SQL queries for exploratory and comparative analysis.
+- The importance of structuring queries with CTEs, window functions, and aggregations.
+- Practical insights into the job market such as demand trends, salary distribution, and skill relevance.
+- How to transform SQL outputs into business-friendly insights.
+- Leveraging AI tools like ChatGPT to quickly summarize findings and validate insights.
 - How to document a technical project for sharing on GitHub
 ## Conclusion
 - The analysis shows clear differences in salary and demand across job roles, companies, and countries.
