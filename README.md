@@ -1,4 +1,4 @@
-# SQL-Data-Jobs-Market-Insights
+# SQL Data Jobs Market Insights
 ## Introduction
 This project explores the data job market by analyzing job postings, salaries, skills, and hiring trends. Using SQL queries and structured datasets, the goal is to uncover insights into demand, compensation, and skill requirements across different roles.
 
